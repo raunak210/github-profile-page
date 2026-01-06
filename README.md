@@ -2,6 +2,16 @@
 
 A React application that replicates GitHub's profile page UI. View any GitHub user's profile with their repositories, contribution graph, and activity overview.
 
+## Screenshots
+
+### Desktop View
+![Desktop View - Profile 1](./screenshots/desktop-1.png)
+
+![Desktop View - Profile 2](./screenshots/desktop-2.png)
+
+### Mobile View
+![Mobile View](./screenshots/mobile.png)
+
 ## Features
 
 - User profile display with avatar, bio, and contact info
