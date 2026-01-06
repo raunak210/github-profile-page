@@ -1,0 +1,235 @@
+.header {
+  background-color: var(--color-bg-primary);
+  z-index: 100;
+}
+
+/* Top Navigation Bar */
+.header__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  height: 64px;
+  gap: 16px;
+}
+
+.header__top-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.header__hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.header__hamburger:hover {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+}
+
+.header__hamburger:focus-visible {
+  outline: 2px solid #0969da;
+  outline-offset: 2px;
+}
+
+.header__logo {
+  color: var(--color-text-primary);
+  flex-shrink: 0;
+}
+
+.header__username {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+}
+
+/* Right side container */
+.header__top-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+/* Search Bar */
+.header__search {
+  width: 272px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.header__search-icon {
+  position: absolute;
+  left: 12px;
+  color: var(--color-text-tertiary);
+  pointer-events: none;
+}
+
+.header__search-input {
+  width: 100%;
+  padding: 8px 12px 8px 36px;
+  font-size: 14px;
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  color: var(--color-text-primary);
+  transition: all 0.2s ease;
+}
+
+.header__search-input::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+.header__search-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  background-color: var(--color-bg-primary);
+  box-shadow: 0 0 0 3px rgba(9, 105, 218, 0.1);
+}
+
+/* Search Icon Button (mobile only - hidden by default) */
+.header__search-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.header__search-btn:hover {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+}
+
+.header__search-btn:focus-visible {
+  outline: 2px solid #0969da;
+  outline-offset: 2px;
+}
+
+/* Avatar Button */
+.header__avatar-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.header__avatar-btn:focus-visible {
+  outline: 2px solid #0969da;
+  outline-offset: 2px;
+}
+
+.header__avatar-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.header__avatar-placeholder {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--color-bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+}
+
+.header__avatar-btn:hover .header__avatar-placeholder {
+  background-color: var(--color-border);
+}
+
+/* Tablet Responsive */
+@media (max-width: 768px) {
+  .header__top {
+    padding: 0 12px;
+    height: 56px;
+    gap: 12px;
+  }
+
+  .header__top-left {
+    gap: 12px;
+  }
+
+  .header__logo {
+    width: 24px;
+    height: 24px;
+  }
+
+  .header__username {
+    font-size: 13px;
+  }
+
+  .header__search {
+    width: 200px;
+  }
+
+  .header__search-input {
+    font-size: 13px;
+    padding: 6px 10px 6px 32px;
+  }
+
+  .header__search-icon {
+    left: 10px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .header__avatar-img,
+  .header__avatar-placeholder {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 540px) {
+  .header__top {
+    gap: 8px;
+  }
+
+  /* Hide search bar on mobile */
+  .header__search {
+    display: none;
+  }
+
+  /* Show search icon button on mobile */
+  .header__search-btn {
+    display: flex;
+  }
+
+  .header__username {
+    display: none;
+  }
+
+  .header__top-right {
+    gap: 8px;
+  }
+}

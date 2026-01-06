@@ -1,0 +1,237 @@
+.contribution-activity {
+  margin-top: 24px;
+  color: var(--color-text-primary);
+}
+
+.contribution-activity__title {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+  color: var(--color-text-primary);
+  font-weight: bold;
+  line-height: 1.25;
+}
+
+.contribution-activity__month-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 10px 0 8px 0;
+}
+
+.contribution-activity__month-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2328;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+.contribution-activity__month-divider {
+  height: 1px;
+  flex: 1;
+  background: #d1d9e0;
+}
+
+/* Timeline layout */
+.contribution-activity__timeline {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  column-gap: 12px;
+}
+
+.contribution-activity__timeline-left {
+  position: relative;
+}
+
+.contribution-activity__timeline-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 11px;
+  width: 2px;
+  background: #d1d9e0;
+  border-radius: 1px;
+}
+
+.contribution-activity__timeline-content {
+  min-width: 0;
+}
+
+.contribution-activity__event {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  column-gap: 12px;
+  align-items: start;
+  padding: 12px 0 8px 0;
+}
+
+.contribution-activity__event-icon {
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  color: #656d76;
+}
+
+.contribution-activity__event-icon svg {
+  fill: currentColor;
+}
+
+.contribution-activity__event-body {
+  min-width: 0;
+}
+
+.contribution-activity__event-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.contribution-activity__event-summary {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #1f2328;
+}
+
+.contribution-activity__event-menu {
+  border: 0;
+  background: transparent;
+  padding: 6px;
+  border-radius: 6px;
+  color: #656d76;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.contribution-activity__event-menu svg {
+  fill: currentColor;
+  display: block;
+}
+
+.contribution-activity__event-menu:hover {
+  background: #f6f8fa;
+}
+
+.contribution-activity__event-menu:focus-visible {
+  outline: 2px solid #0969da;
+  outline-offset: 2px;
+}
+
+/* Repo row (link + meta on left, green bar on right) */
+.contribution-activity__repo-row {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.contribution-activity__repo-left {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.contribution-activity__repo-link {
+  color: #0969da;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 520px;
+}
+
+.contribution-activity__repo-link:hover {
+  text-decoration: underline;
+}
+
+.contribution-activity__repo-link:focus-visible {
+  outline: 2px solid #0969da;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.contribution-activity__repo-meta {
+  color: #656d76;
+  font-size: 14px;
+  line-height: 24px;
+  white-space: nowrap;
+}
+
+.contribution-activity__repo-bar {
+  width: 260px;
+  height: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contribution-activity__repo-bar-fill {
+  height: 10px;
+  background: #1a7f37;
+  border-radius: 999px;
+}
+
+/* Show more button (full width bordered) */
+.contribution-activity__show-more {
+  margin-top: 18px;
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #d1d9e0;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #0969da;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.contribution-activity__show-more:hover {
+  background: #f6f8fa;
+}
+
+.contribution-activity__show-more:focus-visible {
+  outline: 2px solid #0969da;
+  outline-offset: 2px;
+}
+
+.contribution-activity__note {
+  margin: 14px 0 0 0;
+  color: #656d76;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.contribution-activity__note-link {
+  color: #0969da;
+  text-decoration: none;
+}
+
+.contribution-activity__note-link:hover {
+  text-decoration: underline;
+}
+
+.contribution-activity__note-link:focus-visible {
+  outline: 2px solid #0969da;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .contribution-activity__repo-bar {
+    width: 180px;
+  }
+
+  .contribution-activity__repo-link {
+    max-width: 260px;
+  }
+}
+
+

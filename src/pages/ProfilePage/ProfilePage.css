@@ -1,0 +1,131 @@
+.profile-page {
+  min-height: 100vh;
+  background-color: var(--color-bg-primary);
+}
+
+.profile-page__container {
+  display: flex;
+  gap: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.profile-page__sidebar {
+  flex: 0 0 296px;
+  width: 296px;
+}
+
+.profile-page__main {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.profile-page__overview-section {
+  width: 100%;
+}
+
+/* Content section - Desktop: grid layout */
+.profile-page__content-section {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  gap: 16px;
+  align-items: start;
+}
+
+/* ContributionData spans first row, first column */
+.profile-page__contribution-data {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* Year spans both rows, second column */
+.profile-page__year {
+  grid-column: 2;
+  grid-row: 1 / 3;
+}
+
+/* ContributionActivity spans second row, first column */
+.profile-page__contribution-activity {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+/* Tab content */
+.profile-page__tab-content {
+  width: 100%;
+}
+
+/* Empty state */
+.profile-page__empty-state {
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  padding: 48px 24px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.profile-page__empty-state h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2328;
+  margin: 0 0 8px 0;
+}
+
+.profile-page__empty-state p {
+  font-size: 14px;
+  color: #656d76;
+  margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 1012px) {
+  .profile-page__container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .profile-page__sidebar {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-page__container {
+    padding: 16px;
+    gap: 1rem;
+  }
+
+  /* Stack content section vertically on mobile */
+  .profile-page__content-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* Reorder using CSS order */
+  .profile-page__contribution-data {
+    order: 1;
+    width: 100%;
+  }
+
+  .profile-page__year {
+    order: 2;
+    width: 100%;
+  }
+
+  .profile-page__contribution-activity {
+    order: 3;
+    width: 100%;
+  }
+
+  .profile-page__empty-state {
+    padding: 32px 16px;
+  }
+
+  .profile-page__empty-state h3 {
+    font-size: 18px;
+  }
+}

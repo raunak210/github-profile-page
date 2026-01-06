@@ -1,0 +1,149 @@
+.year-selector {
+  flex-shrink: 0;
+  width: 100px;
+}
+
+/* Desktop: List view */
+.year-selector__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.year-selector__button {
+  background: none;
+  border: none;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  text-align: left;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+  width: 100%;
+  font-weight: 500;
+}
+
+.year-selector__button:hover {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+}
+
+.year-selector__button:focus-visible {
+  outline: 2px solid #0969da;
+  outline-offset: -2px;
+}
+
+.year-selector__button--active {
+  background-color: #0969da;
+  color: #fff;
+  font-weight: 600;
+}
+
+.year-selector__button--active:hover {
+  background-color: #0860ca;
+  color: #fff;
+}
+
+/* Mobile: Dropdown (hidden on desktop) */
+.year-selector__dropdown-wrapper {
+  display: none;
+  position: relative;
+}
+
+.year-selector__dropdown-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #0969da;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.year-selector__dropdown-trigger:hover {
+  background-color: #0860ca;
+}
+
+.year-selector__dropdown-trigger:focus-visible {
+  outline: 2px solid #0969da;
+  outline-offset: 2px;
+}
+
+.year-selector__dropdown-icon {
+  transition: transform 0.2s ease;
+}
+
+.year-selector__dropdown-icon--open {
+  transform: rotate(180deg);
+}
+
+.year-selector__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 4px;
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(140, 149, 159, 0.2);
+  z-index: 100;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.year-selector__dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.15s;
+}
+
+.year-selector__dropdown-item:hover {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+}
+
+.year-selector__dropdown-item--active {
+  color: var(--color-text-primary);
+  font-weight: 600;
+  background-color: var(--color-bg-secondary);
+}
+
+.year-selector__dropdown-item:focus-visible {
+  outline: 2px solid #0969da;
+  outline-offset: -2px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .year-selector {
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  /* Hide list view on mobile */
+  .year-selector__list {
+    display: none;
+  }
+
+  /* Show dropdown on mobile */
+  .year-selector__dropdown-wrapper {
+    display: block;
+  }
+}
